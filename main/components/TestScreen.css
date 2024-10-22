@@ -1,0 +1,115 @@
+/* TestScreen.css */
+
+/* General container for the quiz */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title */
+  h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Question styling */
+  .question {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  /* Options styling */
+  .option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* On hover effect for options */
+  .option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Radio button styling */
+  .option input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #007bff; /* Customize radio button color */
+  }
+  
+  /* Submit button */
+  .btn-submit {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button hover effect */
+  .btn-submit:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Score display */
+  .score {
+    font-size: 20px;
+    font-weight: bold;
+    color: #28a745;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .spinner-border {
+    display: block;
+    margin: 20px auto;
+    width: 3rem;
+    height: 3rem;
+    color: #007bff;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  
+    .question {
+      font-size: 16px;
+    }
+  
+    .option {
+      font-size: 14px;
+      padding: 6px;
+    }
+  
+    .btn-submit {
+      font-size: 14px;
+    }
+  }
+  
