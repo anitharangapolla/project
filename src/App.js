@@ -26,7 +26,7 @@ function App() {
   const generateQuiz = async (language) => {
     try {
       // Make your API call to generate a quiz based on the input language
-      const response = await fetch(`YOUR_API_URL?category=${language}&limit=10`); // Adjust the URL accordingly
+      const response = await fetch(`https://api.cohere.ai/v1/generate?category=${language}&limit=10`); // Adjust the URL accordingly
       const data = await response.json();
 
       // Assuming the API returns an array of questions
