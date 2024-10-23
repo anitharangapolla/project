@@ -1,4 +1,3 @@
-// src/QuizSearch.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -24,8 +23,8 @@ const QuizSearch = () => {
         });
 
         const generatedQuiz = response.data.generations[0].text;
-        // Navigate to the TestScreen with the quiz data
-        navigate('/test-screen', { state: { quiz: generatedQuiz } });
+        // Navigate to the TestScreen with the quiz and course name
+        navigate('/test-screen', { state: { quiz: generatedQuiz, courseName: input } });
       } catch (error) {
         console.error('Error generating quiz:', error);
       }

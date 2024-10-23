@@ -60,7 +60,8 @@ function App() {
           <Route path="/quiz-categories" element={<QuizCategories />} />
           <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} setUsername={setUsername} />} />
           <Route path="/signup" element={<Signup setIsLoggedIn={setIsLoggedIn} setUsername={setUsername} />} />
-          <Route path="/test-screen/:courseName" element={<TestScreen />} />
+          <Route path="/test-screen/:courseName" element={<TestScreen />} /> 
+          
           <Route path="/quiz-search" element={
             <QuizSearch generateQuiz={generateQuiz} />
           } />

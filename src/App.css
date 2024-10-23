@@ -249,33 +249,57 @@ button:hover {
 
 /* App.css or QuizCategories.css */
 
-.quiz-container {
-  max-width: 600px; /* Set a max width for the container */
-  margin: auto; /* Center the container */
-  padding: 20px; /* Add some padding */
+/* src/components/quizpage.css */
+.quiz-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  padding: 20px;
 }
 
-.quiz-container input {
-  width: 100%; /* Make input take the full width */
-  padding: 15px; /* Add padding for a bigger look */
-  font-size: 18px; /* Increase font size */
-  border: 2px solid #007bff; /* Border color */
-  border-radius: 5px; /* Rounded corners */
-  margin-bottom: 10px; /* Space between input and button */
+.quiz-page h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-.quiz-container button {
-  width: 100%; /* Make button take the full width */
-  padding: 15px; /* Add padding for a bigger button */
-  font-size: 18px; /* Increase font size */
-  background-color: #007bff; /* Button background color */
-  color: white; /* Button text color */
-  border: none; /* Remove default border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  transition: background-color 0.3s; /* Transition for hover effect */
+.quiz-page button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 5px;
 }
 
-.quiz-container button:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+.quiz-page button:hover {
+  background-color: #218838;
+}
+
+.quiz-page .options {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.quiz-page .options button {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #007bff;
+}
+
+.quiz-page .options button:hover {
+  background-color: #0056b3;
+}
+
+.quiz-page .score {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #333;
 }
