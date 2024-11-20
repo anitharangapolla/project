@@ -24,7 +24,7 @@ const Navbar = () => {
         <Link to="/signup" className="navbar-link">Signup</Link>
 
         {/* Profile Icon */}
-        <img src="profile-user.png" alt="Profile" className="profile-icon" />
+        {/* <img src="profile-user.png" alt="Profile" className="profile-icon" /> */}
       </div>
     </nav>
   );

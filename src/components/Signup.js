@@ -1,14 +1,32 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
+import { signup } from './api/api'; // Import signup function from api.js
 
 const Signup = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState(''); // Added error state
+  const [message, setMessage] = useState(''); // Added message state
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
-  const handleSignup = (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
-    // Add your signup logic here
-    console.log('Signing up with:', name, email, password);
+    setError(''); // Reset error state
+    setMessage(''); // Reset success message
+
+    try {
+      const token = await signup(name, email, password); // API call to signup function
+      // Store token in localStorage
+      localStorage.setItem('authToken', token);
+      
+      setMessage('Signup successful!');
+      
+      // Redirect to home page (or dashboard) after successful signup
+      navigate('/'); // Redirect to the home page or dashboard
+    } catch (err) {
+      setError(err || 'Signup failed. Please try again.');
+    }
   };
 
   return (
@@ -41,6 +59,8 @@ const Signup = () => {
         />
         <button type="submit" className="btn">Sign Up</button>
       </form>
+      {error && <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>} {/* Display error if any */}
+      {message && <p style={{ color: 'green', textAlign: 'center' }}>{message}</p>} {/* Display success message */}
       <p style={{ textAlign: 'center' }}>
         Already have an account? <a href="/login">Login</a>
       </p>
