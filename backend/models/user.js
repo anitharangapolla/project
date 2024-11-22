@@ -4,6 +4,7 @@ const crypto = require('crypto');
 const jwt = require('jsonwebtoken'); // Don't forget to import jwt
 
 const UserSchema = new mongoose.Schema({
+  name : { type: String, required: true, unique: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   secretKey: { type: String, required: true, default: () => crypto.randomBytes(32).toString('hex') }, // Random key generated during user creation
